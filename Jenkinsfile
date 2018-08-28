@@ -27,7 +27,7 @@ pipeline {
                 }
             }
             steps {
-                error 'need to declare columns.csv'
+                sh "table2qb exec cube-pipeline --input-csv out/migrationflows.csv --output-file out/observations.ttl --column-config metadata/columns.csv --dataset-name 'ONS Local Area Migration Indicators' --base-uri http://gss-data.org.uk/ --dataset-slug ons-local-area-migration-indicators"
             }
         }
         stage('Upload draftset') {
