@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                sh "jupyter-nbconvert --to python --stdout 'Local area migration indicators UK Migration Flows.ipynb' | ipython"
+                sh "jupyter-nbconvert --output-dir=out --execute 'Local area migration indicators UK Migration Flows.ipynb'"
             }
         }
         stage('Upload draftset') {
