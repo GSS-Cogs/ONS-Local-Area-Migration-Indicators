@@ -31,8 +31,8 @@ pipeline {
                         csvs.add("out/${file.name}")
                     }
                     uploadTidy(csvs,
-                               oldLabel='ONS Local Area Migration Indicators',
-                               mapping='https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv')
+                               mapping='https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv',
+                               oldLabel='ONS Local Area Migration Indicators')
                 }
             }
         }
