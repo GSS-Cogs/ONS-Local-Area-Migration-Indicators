@@ -30,9 +30,9 @@ pipeline {
                     for (def file : findFiles(glob: 'out/*.csv')) {
                         csvs.add("out/${file.name}")
                     }
+		    dataset.delete('ONS Local Area Migration Indicators')
                     uploadTidy(csvs,
-                               mapping='https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv',
-                               oldLabel='ONS Local Area Migration Indicators')
+                               mapping='https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv')
                 }
             }
         }
