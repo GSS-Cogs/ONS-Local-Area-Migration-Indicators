@@ -31,15 +31,15 @@ pipeline {
                         csvs.add("out/${file.name}")
                     }
                     uploadTidy(csvs,
-                               mapping='https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv',
-                               oldLabel='ONS Local Area Migration Indicators')
+                               'https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv',
+                               'ONS Local Area Migration Indicators')
                 }
             }
         }
         stage('Publish') {
             steps {
                 script {
-                    publishDraftset()
+                    jobDraft.publish()
                 }
             }
         }
