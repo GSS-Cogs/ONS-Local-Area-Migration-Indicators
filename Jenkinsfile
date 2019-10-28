@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                sh "jupyter-nbconvert --output-dir=out --ExecutePreprocessor.timeout=None --execute 'Local area migration indicators UK Migration Flows.ipynb'"
+                sh "jupyter-nbconvert --output-dir=out --ExecutePreprocessor.timeout=None --execute 'main.py'"
             }
         }
         stage('Upload draftset') {
