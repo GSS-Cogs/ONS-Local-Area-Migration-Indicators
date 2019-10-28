@@ -67,7 +67,8 @@ from pathlib import Path
 destinationFolder = Path('out')
 destinationFolder.mkdir(exist_ok=True, parents=True)
 
-tidy.to_csv(destinationFolder / ('migrationflows.csv'), index = False)
+#tidy.to_csv(destinationFolder / ('migrationflows.csv'), index = False)
+tidy.to_csv(destinationFolder / ('observations.csv'), index = False)
 
 # +
 scraper.dataset.family = 'migration'
